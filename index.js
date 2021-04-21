@@ -2,13 +2,14 @@ const express = require('express')
 require('dotenv').config()
 const mongoose = require('mongoose')
 const ShopItem = require('./models/shopItem')
+const port = process.env.PORT || 3010;
 
 const URI = `mongodb+srv://${process.env.username}:${process.env.password}@mongofirst.sd25r.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 const app = express()
 
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, () => {
   console.log('database connected');
-  app.listen(3010, () => {
+  app.listen(port, () => {
     console.log('listening 3010');
   })
 })
