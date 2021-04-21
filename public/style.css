@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap");
+
+/*-----------------------------------------------------------------------------------------------
+                                        DEAFULT CSS
+-------------------------------------------------------------------------------------------------*/
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  font-size: 12px;
+  color: #323a45;
+}
+/*-----------------------------------------------------------------------------------------------
+                                        HEADER TAG and NAVBAR
+-------------------------------------------------------------------------------------------------*/
+header {
+  padding: 20px 7%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+/* HAMBURGER MENU ICON  */
+header nav > a {
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+/* MENU CLOSE X  */
+header nav ul > a {
+  display: none;
+}
+
+nav ul li {
+  padding-left: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #323a45;
+  transition: all 0.5s linear;
+}
+nav ul li a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+/*-----------------------------------------------------------------------------------------------
+                                        MAIN TAG and SECTIONS
+-------------------------------------------------------------------------------------------------*/
+main {
+  padding: 20px 7%;
+}
+main figure a {
+  text-decoration: none;
+  /* width: 100%; */
+}
+main figure a img {
+  width: 100%;
+  transition: all 0.7s linear;
+}
+main figure a img:hover {
+  background: #00000080;
+  background-blend-mode: multiply;
+  opacity: 0.2;
+}
+figure {
+  margin: 30px 0;
+}
+figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 10px;
+}
+figcaption h4:nth-of-type(2) {
+  color: #848484;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+main figure:nth-child(6n + 1) {
+  width: 100%;
+}
+
+h4 {
+  margin: 0;
+}
+/*-----------------------------------------------------------------------------------------------
+                                        ITEM DETAILS
+-------------------------------------------------------------------------------------------------*/
+#item-details {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#item-details figure img {
+  width: 100%;
+  transition: all 0.7s linear;
+}
+
+#item-details figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 10px;
+}
+#item-details figure figcaption h4:nth-of-type(2) {
+  color: #848484;
+}
+#options {
+  display: flex;
+  justify-content: center;
+}
+#options a {
+  text-decoration: none;
+  background-color: #323a45;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 5px;
+}
+/*-----------------------------------------------------------------------------------------------
+                                        FOOTER TAG
+-------------------------------------------------------------------------------------------------*/
+
+footer {
+  padding: 20px 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+footer > div:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+}
+footer div:nth-of-type(3) {
+  justify-self: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #323a45;
+  font-weight: 500;
+}
+
+footer ul {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+footer > p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+/*-----------------------------------------------------------------------------------------------
+                                        MEDIA QUERIES
+-------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    position: relative;
+  }
+  header nav ul {
+    width: 80%;
+    display: none;
+    position: absolute;
+    background-color: #666;
+    left: auto;
+    right: auto;
+    bottom: -200px;
+    text-align: center;
+    opacity: 0.5;
+    transition: all 0.7s;
+  }
+  header nav ul > a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  header nav ul li {
+    padding: 20px 0;
+  }
+  header nav ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  header nav > a {
+    display: inline-block;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+  footer {
+    display: block;
+  }
+  footer > div:nth-of-type(2) {
+    justify-content: center;
+  }
+  footer > div:nth-of-type(2) div {
+    padding: 20px 5%;
+  }
+  footer div:nth-of-type(3) {
+    text-align: center;
+  }
+}

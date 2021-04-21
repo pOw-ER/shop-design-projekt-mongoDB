@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= result.product_name %></title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+  <%- include('../partials/header.ejs')  %>
+  <section id="options">
+    <a href=<%=`/delete/${result.id}` %>>Delete Item</a>
+    <a href=<%=`/update/${result.id}` %>>Update Item</a>
+  </section>
+  <main id="item-details">
+    <figure>
+      <img src=<%= `${result.img_link}` %> alt="">
+      <figcaption>
+        <div>
+          <h4><%= result.product_name %></h4>
+          <h4><%= result.company %></h4>
+        </div>
+        <div>
+          <span>$<%= result.price %></span>
+        </div>
+      </figcaption>
+    </figure>
+  </main>
+  <%- include('../partials/footer.js')  %>
+  <script src="/main.js"></script>
+</body>
+
+</html>
