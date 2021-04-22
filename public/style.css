@@ -22,6 +22,10 @@ nav {
   justify-content: space-between;
   align-items: baseline;
 }
+header nav h2 a {
+  text-decoration: none;
+  color: #323a45;
+}
 /* HAMBURGER MENU ICON  */
 header nav > a {
   display: none;

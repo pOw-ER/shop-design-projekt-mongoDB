@@ -14,3 +14,9 @@ function closeMenu() {
     menu.style.display = "none";
   }
 }
+
+const deleteButton = document.getElementById("delete-button")
+
+deleteButton.addEventListener("click", () => {
+  confirm("Are you sure you want to delete this item?")
+})

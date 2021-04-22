@@ -14,7 +14,7 @@
 <body>
   <%- include('../partials/header.ejs')  %>
   <section id="options">
-    <a href=<%=`/delete/${result.id}` %>>Delete Item</a>
+    <a href=<%=`/delete/${result.id}` %> id="delete-button">Delete Item</a>
     <a href=<%=`/update/${result.id}` %>>Update Item</a>
   </section>
   <main id="item-details">
